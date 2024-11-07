@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <form th:action="@{/empleado/vehiculo/save}" th:object="${vehiculo}" method="post">
+        <input type="hidden" th:field="*{idVehiculo}" />
+        <label>Matrícula:</label>
+        <input type="text" th:field="*{matricula}" />
+        <label>Marca:</label>
+        <input type="text" th:field="*{marca}" />
+        <label>Modelo:</label>
+        <input type="text" th:field="*{modelo}" />
+        <label>Año:</label>
+        <input type="number" th:field="*{año}" />
+        <label>Estado:</label>
+        <input type="text" th:field="*{estado}" />
+        <label>Tipo:</label>
+        <input type="text" th:field="*{tipo}" />
+        <label>Kilometraje:</label>
+        <input type="number" th:field="*{kilometraje}" />
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
